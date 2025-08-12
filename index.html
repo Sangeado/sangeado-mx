@@ -40,6 +40,31 @@ header h1 { margin:0; color:#fff; font-size:32px; letter-spacing:2px;}
   color: #aaa;
 }
 
+/* Books section styles */
+.books-section {
+  margin-top: 20px;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.books-list {
+  display: none;
+  margin-top: 10px;
+  font-size: 1em;
+  color: #fff;
+}
+
+.books-list div {
+  margin: 5px 0;
+}
+
+.books-list hr {
+  border: none;
+  border-top: 1px solid #fff;
+  margin: 8px 0;
+}
+
+
 .phrase {
   font-size: 32px;
   margin-bottom: 20px;
@@ -63,6 +88,40 @@ header h1 { margin:0; color:#fff; font-size:32px; letter-spacing:2px;}
     <!-- Spotify icon linking to the provided playlist -->
     <a href="https://open.spotify.com/playlist/2Z4O7aApSRZHFU5YuFuDNj?si=69623a06d3924519" target="_blank"><i class="fab fa-spotify"></i></a>
   </div>
+
+  <!-- Books icon and list -->
+  <div class="books-section">
+    <i class="fas fa-book"></i>
+  </div>
+  <div class="books-list">
+    <div>El libro de los muertos (Egipto)</div>
+    <div>Libro de Enoc (Etiopía)</div>
+    <div>Upanishads (India)</div>
+    <div>Libro tibetano de los muertos (China)</div>
+    <div>Biblia etíope</div>
+    <hr>
+    <div>El existencialismo es un humanismo</div>
+    <hr>
+    <div>Ten peor coche que tu vecino</div>
+  </div>
+
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var booksSection = document.querySelector('.books-section');
+  var booksList = document.querySelector('.books-list');
+  if (booksSection && booksList) {
+    booksSection.addEventListener('click', function() {
+      if (booksList.style.display === 'none' || booksList.style.display === '') {
+        booksList.style.display = 'block';
+      } else {
+        booksList.style.display = 'none';
+      }
+    });
+  }
+});
+</script>
+
 </body>
 </html>
